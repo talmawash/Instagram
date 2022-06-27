@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		23F648B84FDBAB159AD444D2 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F775C9B7D192224E8B2F9404 /* Pods_Instagram.framework */; };
+		3995E61C286A5D9B006255E1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3995E61B286A5D9B006255E1 /* HomeViewController.m */; };
+		39D225C8286A4C2000F307F1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D225C7286A4C2000F307F1 /* LoginViewController.m */; };
 		39F1E44F286661CA00988AC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F1E44E286661CA00988AC3 /* AppDelegate.m */; };
 		39F1E452286661CA00988AC3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F1E451286661CA00988AC3 /* SceneDelegate.m */; };
-		39F1E455286661CA00988AC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F1E454286661CA00988AC3 /* ViewController.m */; };
 		39F1E458286661CA00988AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F1E456286661CA00988AC3 /* Main.storyboard */; };
 		39F1E45A286661CB00988AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F1E459286661CB00988AC3 /* Assets.xcassets */; };
 		39F1E45D286661CB00988AC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F1E45B286661CB00988AC3 /* LaunchScreen.storyboard */; };
@@ -19,13 +20,15 @@
 
 /* Begin PBXFileReference section */
 		32D258D3AE7A46FBB07C78E2 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
+		3995E61A286A5D9B006255E1 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3995E61B286A5D9B006255E1 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		39D225C6286A4C2000F307F1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		39D225C7286A4C2000F307F1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		39F1E44A286661CA00988AC3 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F1E44D286661CA00988AC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39F1E44E286661CA00988AC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		39F1E450286661CA00988AC3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		39F1E451286661CA00988AC3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		39F1E453286661CA00988AC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39F1E454286661CA00988AC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39F1E457286661CA00988AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39F1E459286661CB00988AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F1E45C286661CB00988AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39D225C9286A4C2D00F307F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39D225C6286A4C2000F307F1 /* LoginViewController.h */,
+				39D225C7286A4C2000F307F1 /* LoginViewController.m */,
+				3995E61A286A5D9B006255E1 /* HomeViewController.h */,
+				3995E61B286A5D9B006255E1 /* HomeViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		39F1E441286661CA00988AC3 = {
 			isa = PBXGroup;
 			children = (
@@ -68,12 +82,11 @@
 		39F1E44C286661CA00988AC3 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				39D225C9286A4C2D00F307F1 /* ViewControllers */,
 				39F1E44D286661CA00988AC3 /* AppDelegate.h */,
 				39F1E44E286661CA00988AC3 /* AppDelegate.m */,
 				39F1E450286661CA00988AC3 /* SceneDelegate.h */,
 				39F1E451286661CA00988AC3 /* SceneDelegate.m */,
-				39F1E453286661CA00988AC3 /* ViewController.h */,
-				39F1E454286661CA00988AC3 /* ViewController.m */,
 				39F1E456286661CA00988AC3 /* Main.storyboard */,
 				39F1E459286661CB00988AC3 /* Assets.xcassets */,
 				39F1E45B286661CB00988AC3 /* LaunchScreen.storyboard */,
@@ -89,7 +102,6 @@
 				32D258D3AE7A46FBB07C78E2 /* Pods-Instagram.debug.xcconfig */,
 				606EE61F89DA47063D2DD648 /* Pods-Instagram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,9 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39F1E455286661CA00988AC3 /* ViewController.m in Sources */,
+				39D225C8286A4C2000F307F1 /* LoginViewController.m in Sources */,
 				39F1E44F286661CA00988AC3 /* AppDelegate.m in Sources */,
 				39F1E460286661CB00988AC3 /* main.m in Sources */,
+				3995E61C286A5D9B006255E1 /* HomeViewController.m in Sources */,
 				39F1E452286661CA00988AC3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
