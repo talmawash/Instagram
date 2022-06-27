@@ -15,8 +15,21 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="instagram-1868978-1583142" translatesAutoresizingMaskIntoConstraints="NO" id="a2i-4H-zg5">
+                                <rect key="frame" x="139" y="380" width="136" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="a2i-4H-zg5" secondAttribute="height" multiplier="1:1" id="5PV-TI-6au"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a2i-4H-zg5" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:6" id="7kZ-dy-Qqe"/>
+                            <constraint firstItem="a2i-4H-zg5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="EWs-ow-thl"/>
+                            <constraint firstItem="a2i-4H-zg5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fZ4-XO-E3z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,6 +38,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="instagram-1868978-1583142" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
