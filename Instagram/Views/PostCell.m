@@ -6,12 +6,28 @@
 //
 
 #import "PostCell.h"
+#import "Parse/Parse.h"
+
+@interface PostCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgPost;
+@property (weak, nonatomic) IBOutlet UILabel *lblCaption;
+
+
+@end
 
 @implementation PostCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)load {
+    PFFileObject *img = self.post[@"image"];
+    UIImage *image = [UIImage imageWithData:img.getData];
+    [self.imgPost setImage:image];
+    self.lblCaption.text = self.post[@"caption"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
