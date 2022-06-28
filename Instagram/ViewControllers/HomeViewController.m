@@ -8,7 +8,7 @@
 #import "HomeViewController.h"
 #import "LoginViewController.h"
 #import "Parse/Parse.h"
-#import "AppDelegate.h"
+#import "SceneDelegate.h"
 #import "PostCell.h"
 
 @interface HomeViewController ()
@@ -53,9 +53,10 @@
 }
 
 - (IBAction)logoutUser:(id)sender {
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        [self dismissViewControllerAnimated:true completion:nil];
-    }];
+    [PFUser logOut];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SceneDelegate *sd = self.view.window.windowScene.delegate;
+    sd.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
