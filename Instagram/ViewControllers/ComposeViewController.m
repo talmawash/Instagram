@@ -22,7 +22,7 @@
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    imagePickerVC.allowsEditing = YES;
+    imagePickerVC.allowsEditing = NO;
 
     // The Xcode simulator does not support taking pictures, so let's first check that the camera is indeed supported on the device before trying to present it.
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -43,7 +43,7 @@
 - (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
     UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     
-    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+    resizeImageView.contentMode = UIViewContentModeScaleToFill;
     resizeImageView.image = image;
     
     UIGraphicsBeginImageContext(size);
@@ -58,10 +58,10 @@
     
     // Get the image captured by the UIImagePickerController
 
-    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    UIImage *editedImage = info[UIImagePickerControllerOriginalImage];
 
     // Do something with the images (based on your use case)
-    editedImage = [self resizeImage:editedImage withSize:CGSizeMake(374, 173)];
+    editedImage = [self resizeImage:editedImage withSize:CGSizeMake(374, 210.5)];
     [self.imgPost setImage:editedImage];
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
