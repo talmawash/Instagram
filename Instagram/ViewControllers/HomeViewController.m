@@ -36,8 +36,8 @@
     [self.refreshControl beginRefreshing];
     PFQuery *query = [PFQuery queryWithClassName:@"Posts"];
     [query orderByDescending:@"createdAt"];
-    [query includeKey:@"image"];
-
+    [query setLimit:20];
+    
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
