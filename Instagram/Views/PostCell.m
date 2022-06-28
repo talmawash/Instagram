@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgPost;
 @property (weak, nonatomic) IBOutlet UILabel *lblCaption;
+@property (weak, nonatomic) IBOutlet UILabel *lblUser;
 
 
 @end
@@ -28,6 +29,9 @@
     UIImage *image = [UIImage imageWithData:img.getData];
     [self.imgPost setImage:image];
     self.lblCaption.text = self.post[@"caption"];
+    PFUser *user = self.post[@"user"];
+    [user fetchIfNeeded];
+    self.lblUser.text = [NSString stringWithFormat:@"@%@", user.username];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
