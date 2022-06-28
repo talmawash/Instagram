@@ -33,7 +33,7 @@
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
 
-    [self presentViewController:imagePickerVC animated:YES completion:nil];
+    [self presentViewController:imagePickerVC animated:NO completion:nil];
     
     self.txtCaption.layer.borderWidth = 0.1f;
     self.txtCaption.layer.borderColor = [[UIColor blackColor] CGColor];
@@ -54,6 +54,11 @@
     return newImage;
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     // Get the image captured by the UIImagePickerController
@@ -64,7 +69,7 @@
     editedImage = [self resizeImage:editedImage withSize:CGSizeMake(374, 210.5)];
     [self.imgPost setImage:editedImage];
     // Dismiss UIImagePickerController to go back to your original view controller
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 
