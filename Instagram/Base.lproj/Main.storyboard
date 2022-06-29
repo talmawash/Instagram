@@ -80,28 +80,38 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="Cgy-XZ-8JI" customClass="PostCell">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="272"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="322"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cgy-XZ-8JI" id="mhb-kj-rYF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgm-ME-ufe">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="374" id="eGD-C9-B6h"/>
                                                         <constraint firstAttribute="width" secondItem="dgm-ME-ufe" secondAttribute="height" multiplier="16:9" id="zG9-w0-SBp"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpC-JZ-Aul">
-                                                    <rect key="frame" x="121.5" y="244" width="273.5" height="18"/>
+                                                    <rect key="frame" x="121.5" y="244" width="273.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqR-Bf-IiC">
-                                                    <rect key="frame" x="10" y="243" width="91.5" height="18"/>
+                                                    <rect key="frame" x="10" y="243" width="91.5" height="19"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ce4-5e-K47">
+                                                    <rect key="frame" x="10" y="294.5" width="32" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="CUX-eV-gBT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -109,20 +119,25 @@
                                             <constraints>
                                                 <constraint firstItem="TpC-JZ-Aul" firstAttribute="top" secondItem="dgm-ME-ufe" secondAttribute="bottom" constant="11" id="06C-nI-rFs"/>
                                                 <constraint firstItem="TpC-JZ-Aul" firstAttribute="leading" secondItem="TqR-Bf-IiC" secondAttribute="trailing" constant="20" id="4fT-rO-PYq"/>
+                                                <constraint firstItem="Ce4-5e-K47" firstAttribute="leading" secondItem="mhb-kj-rYF" secondAttribute="leading" constant="10" id="EbP-ZE-HIL"/>
                                                 <constraint firstItem="TpC-JZ-Aul" firstAttribute="width" secondItem="TqR-Bf-IiC" secondAttribute="width" multiplier="3:1" id="Hlm-kt-laG"/>
                                                 <constraint firstItem="TqR-Bf-IiC" firstAttribute="leading" secondItem="mhb-kj-rYF" secondAttribute="leading" constant="10" id="Wpr-Ig-KIR"/>
+                                                <constraint firstItem="Ce4-5e-K47" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dgm-ME-ufe" secondAttribute="bottom" constant="61" id="cI2-vD-fOb"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ce4-5e-K47" secondAttribute="trailing" constant="20" symbolic="YES" id="eEA-Qe-glv"/>
                                                 <constraint firstAttribute="trailing" secondItem="dgm-ME-ufe" secondAttribute="trailing" id="f5J-kZ-IFC"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TqR-Bf-IiC" secondAttribute="bottom" constant="10.5" id="fYp-in-nOh"/>
+                                                <constraint firstAttribute="bottom" secondItem="TqR-Bf-IiC" secondAttribute="bottom" constant="60" id="fYp-in-nOh"/>
                                                 <constraint firstItem="dgm-ME-ufe" firstAttribute="leading" secondItem="mhb-kj-rYF" secondAttribute="leading" id="g1k-kj-uUp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ce4-5e-K47" secondAttribute="bottom" constant="11.5" id="hu8-Mz-C20"/>
                                                 <constraint firstAttribute="trailing" secondItem="TpC-JZ-Aul" secondAttribute="trailing" constant="19" id="j9M-tQ-PoU"/>
                                                 <constraint firstItem="TqR-Bf-IiC" firstAttribute="top" secondItem="dgm-ME-ufe" secondAttribute="bottom" constant="10" id="law-Qu-aZX"/>
                                                 <constraint firstItem="dgm-ME-ufe" firstAttribute="top" secondItem="mhb-kj-rYF" secondAttribute="top" id="wBd-4c-ZHh"/>
-                                                <constraint firstAttribute="bottom" secondItem="TpC-JZ-Aul" secondAttribute="bottom" constant="10" id="xWK-Mo-WMX"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TpC-JZ-Aul" secondAttribute="bottom" constant="10" id="xWK-Mo-WMX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imgPost" destination="dgm-ME-ufe" id="amU-Xx-S41"/>
                                             <outlet property="lblCaption" destination="TpC-JZ-Aul" id="vgc-3g-9CI"/>
+                                            <outlet property="lblDate" destination="Ce4-5e-K47" id="9PI-yc-pGE"/>
                                             <outlet property="lblUser" destination="TqR-Bf-IiC" id="bBO-R8-U6m"/>
                                         </connections>
                                     </tableViewCell>

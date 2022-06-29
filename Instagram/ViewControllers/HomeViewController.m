@@ -29,13 +29,25 @@
     [self.refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44;
+
     [self beginRefresh:self.refreshControl];
+}
+
+- (IBAction)expandDetails:(id)sender {
+    if ([((UITapGestureRecognizer*)sender).view isKindOfClass:[PostCell class]]) {
+        PostCell *cell = ((UITapGestureRecognizer*)sender).view;
+        [cell expand];
+        [self.tableView beginUpdates];
+        [self.tableView endUpdates];
+    }
 }
 
 
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
     [self.refreshControl beginRefreshing];
     PFQuery *query = [PFQuery queryWithClassName:@"Posts"];
+    [query includeKey:@"user"];
     [query orderByDescending:@"createdAt"];
     [query setLimit:20];
     
@@ -68,6 +80,8 @@
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
     cell.post = self.posts[indexPath.row];
     [cell load];
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandDetails:)];
+    [cell addGestureRecognizer:recognizer];
     return cell;
 }
 

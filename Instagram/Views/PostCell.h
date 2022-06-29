@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) NSDictionary *post;
 
 - (void)load;
+- (void)expand;
 
 @end
 
